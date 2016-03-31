@@ -8,7 +8,7 @@ int main (int argc, char **argv)
   int index;
   int c;
 
-  while ((c = getopt (argc, argv, "abc:")) != -1)
+  while ((c = getopt(argc, argv, "abc:")) != -1)
   {
     printf("in while to get c=%c, optarg=%s\n", c, optarg);
     switch (c)
