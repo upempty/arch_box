@@ -7,10 +7,11 @@
    ```
    
    - [production code]  
-   ```#ifndef TESTING
+   ```
+   #ifndef TESTING
    internal function
    #endif
-```
+   ```
    
    
   
