@@ -40,11 +40,12 @@ char *get_one_section_from_hash_value(char **value)
 */
 
 /* refactor */
+#define SEPERATOR ';'
 char *get_one_section_from_hash_value(char **value)
 {
     int len = strlen(*value), offset = 0;
     char *dsl_name = *value;
-    char *pos = strchr(*value, ';');
+    char *pos = strchr(*value, SEPERATOR);
     if (pos != NULL)
     {
         offset = pos - (*value);
