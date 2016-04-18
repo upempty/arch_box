@@ -7,3 +7,4 @@
 * 3. cmserver class dia---> detail of implement ----> unit test ------> refactor ----> new function
 * 4. innovation point
 * 5. redis source code go thorough.
+* 6. daily checking one code segment from production code or opensource code.
