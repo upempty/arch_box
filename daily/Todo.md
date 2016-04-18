@@ -6,3 +6,4 @@
 * 2. super Putty/smart putty, valgrind,glib
 * 3. cmserver class dia---> detail of implement ----> unit test ------> refactor ----> new function
 * 4. innovation point
+* 5. redis source code go thorough.
