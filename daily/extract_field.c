@@ -70,3 +70,20 @@ int main(int argc, char *argv[])
     //free(str);
     return 0;
 }
+
+/* below save_ptr is used for free finally without memory leak.
+   as str will be changed in this function(get_one_dsl_name_from_hash_value).
+int main(int argc, char *argv[])
+{
+    char *str = malloc(20);
+    char *save_ptr=str;
+    strcpy(str, "ABC;DEFG;");
+    char *res;
+    printf("strptr1=%p\n", save_ptr);
+    res = get_one_dsl_name_from_hash_value(&str);
+    printf("result=%s, str=%s\n", res, str);
+    printf("strptr2=%p\n", save_ptr);
+    free(save_ptr);
+    return 0;
+}
+*/
