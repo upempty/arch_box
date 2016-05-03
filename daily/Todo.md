@@ -8,3 +8,4 @@
 * 4. innovation point:a) auto construct dsl file b) memory file to xml ascii file
 * 5. redis source code go thorough.---workshop ----2015/6
 * 6. daily checking one code segment from production code or opensource code.
+* 7. Process for handling memory file to xml file
