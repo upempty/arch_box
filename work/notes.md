@@ -18,3 +18,6 @@ Validator register to master ldap
 Activator register to local ldap  
 And during the commit the transaction, it first check master's behavior(to slave and to validator), then local's.  
 So first Validator firstly be called ,then Activator.  
+
+For Slave only, it will notify to slaves to store it only.  and end_tx will call commit, but it will skip if already commited.  
+
