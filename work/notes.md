@@ -23,6 +23,6 @@ For Slave only, it will notify to slaves to store it only.  and then end_tx will
 but it will skip to store if it's already committed.  
 
 When activation failure, it will rollback, but as the data was already commited/stored.  
-And our rollback means that for transaction subscriber rollback, which is the inform flag, but not the real data rollback.  
+And our rollback means that for transaction subscriber rollback, which is the inform flag, but not the real data from DB rollback.  
 
 
