@@ -26,3 +26,6 @@ When activation failure, it will rollback, but as the data was already commited/
 And our rollback means that for transaction subscriber rollback, which is the inform flag, but not the real data from DB rollback.  
 
 
+## docker
+docker start c0b  
+docker exec -it c0b /bin/bash  
