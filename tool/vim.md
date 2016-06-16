@@ -1,3 +1,6 @@
-For hidden/extend code seg:  
+### hidden/extend code seg:  
 zf  
-zo
+zo  
+## color schem
+:colorschem default  
+:colorschem morning  
