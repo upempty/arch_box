@@ -15,7 +15,7 @@ code style like if/while entries are different by programers. Specially for lega
    #endif
    ```  
   
-3. To skip the test, add the prefix for the test name:  
+3. To skip the test, add the prefix(DISABLED_) for the test name:  
 TEST_F(MarsTesting, DISABLED_turn_left__move_from_east_to_north)
    
    
