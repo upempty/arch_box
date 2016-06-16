@@ -1,3 +1,3 @@
-For hidden code seg:  
+For hidden/extend code seg:  
 zf  
 zo
