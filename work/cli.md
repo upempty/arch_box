@@ -7,8 +7,8 @@
 > setup generation: parse all entries, and pass to jinja template  
 > command class generation: contruct class name to jinja template  
 5. cli -q
-6. feature:auto complete function:  
-```
+6. feature:auto complete function:
+```python
 class InteractiveCmd(InteractiveApp, object):  
    def completedefault(self, text, line, start_index, end_index):
    \#invoked when complete_<commandname> -method is not defined
