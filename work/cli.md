@@ -11,5 +11,5 @@
 ```python
 class InteractiveCmd(InteractiveApp, object):  
    def completedefault(self, text, line, start_index, end_index):
-   \#invoked when complete_<commandname> -method is not defined
+   #invoked when complete_<commandname> -method is not defined
 ```
