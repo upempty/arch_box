@@ -9,8 +9,8 @@
 5. cli -q  
 
 6. feature:auto complete function:  
-'
+'''
 class InteractiveCmd(InteractiveApp, object):  
    def completedefault(self, text, line, start_index, end_index):
    \#invoked when complete_<commandname> -method is not defined
-'
+'''
