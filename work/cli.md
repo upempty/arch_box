@@ -1,6 +1,6 @@
 
 ##cli based cliff framework
-1. it needs intractive with running configuration server  
+1. it needs interact with running configuration server
 2. structure: Yang module.
 3. command: set a-b-c field1 value1 field2 value2
 4. generation setup  
