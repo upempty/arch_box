@@ -4,8 +4,8 @@
 2. structure: Yang module.
 3. command: set a-b-c field1 value1 field2 value2
 4. generation setup  
-a) setup generation: parse all entries, and pass to jinja template
-b) command class generation: contruct class name to jinja template
+> setup generation: parse all entries, and pass to jinja template
+> command class generation: contruct class name to jinja template
 5. cli -q
 
 6. feature
