@@ -13,3 +13,4 @@
 ### 2016.7.13
 * 1. redis source code reading  
 * 2. C++ project code reading  
+* 3. libevent how to implement async  
