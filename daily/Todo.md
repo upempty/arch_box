@@ -14,3 +14,4 @@
 * 1. redis source code reading  
 * 2. C++ project code reading  
 * 3. libevent how to implement async  
+* 4. linux kernel networking protocol stack!!!
