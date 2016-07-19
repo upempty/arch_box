@@ -1,5 +1,5 @@
 
-1. git merge branch(to current checkedout branch: e.g: master)  
+1. git merge branch(to current checked out branch: e.g: master)  --git reset --merge
 **Understand When & Why a Conflict Happens**  
 Conflicts occurs when the same file was changed in contradictory ways.
 The most common situation when it cannot do this is 
