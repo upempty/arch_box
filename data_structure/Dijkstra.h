@@ -1,3 +1,4 @@
+#include <list>
 #include "Graph.h"
 
 class Dijkstra 
@@ -83,7 +84,6 @@ public:
 
     void print(void)
     {
-        std::cout<<"Distances from 0"<<std::endl;
         for(int i = 0; i < _vertex_num; i++)
         {
             std::cout<<_distances[i]<<std::endl;

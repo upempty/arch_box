@@ -24,7 +24,17 @@ public:
 
     ~Graph()
     {
-        //To release allocated spaces     
+        for (int i = 0; i < _vertex_num; i++)
+        {
+            Edge *p = _graph[i].head;
+            Edge *tmp = p;
+            while (p != NULL)
+            {
+                tmp = p->next;
+                delete p;
+                p = tmp;
+            }
+        }
     };
 
     struct Edge *createEdge(int dest, int weight)

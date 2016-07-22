@@ -1,8 +1,4 @@
 #include <iostream>
-#include <vector>
-#include <list>
-#include <map>
-
 #include "Dijkstra.h"
 
 int main(int argc, char *argv[])
@@ -16,6 +12,7 @@ int main(int argc, char *argv[])
     graph.addEdge(1, 2, 19);
 
     Dijkstra dijkstra(&graph);
+    std::cout<<"Distances from 0"<<std::endl;
     dijkstra.dijkstraPath(0);
     dijkstra.print();
     return 0;
