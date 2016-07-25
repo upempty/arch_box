@@ -29,3 +29,11 @@ And our rollback means that for transaction subscriber rollback, which is the in
 ## docker
 docker start c0b  
 docker exec -it c0b /bin/bash  
+
+## timer
+```
+timer fd = create it-->timerfd_create  
+run when ->add timer->reset timer fd for nearest.-->timerfd_settime timer fd  
+typedef std::function<void()> TimerCallback  
+Timer(const TimerCallback &cb, timespec when, double interval)  
+```
