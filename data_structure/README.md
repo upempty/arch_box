@@ -2,5 +2,9 @@
 1. RingBuffer
 2. Graph/Dijkstra  
 
-DFS  
-BFS  
+3. Trie tree  
+
+4. is_loop  
+5. quick_sort  
+6. 
+
