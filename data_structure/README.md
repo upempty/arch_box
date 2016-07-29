@@ -6,5 +6,6 @@
 
 4. is_loop  
 5. quick_sort  
-6. 
+6. DFS  
+7. BFS  
 
