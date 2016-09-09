@@ -15,8 +15,13 @@ sys_socketcall->
 ->sys_socket->sock_create-> inet_create-->  
 --then operation for socket is using the searched specified proto's operation  
 ->sys_connect--sock = sockfd_lookup(fd, &err)--->sock->ops->connect(inet_stream_ops's inet_stream_connect)->  
-->sk->sk_prot->connect(tcp_prot's tcp_v4_connect)  --> tcp_connect ->  queuetail tcp_transmit_skb--> queue_xmit-->
-->
+->sk->sk_prot->connect(tcp_prot's tcp_v4_connect)  --> tcp_connect ->  queuetail tcp_transmit_skb-->  
+->queue_xmit(ipv4_specific's ip_queue_xmit)-->NF_HOOK(PF_INET, NF_IP_LOCAL_OUT, skb, NULL, rt->u.dst.dev, dst_output)  
+->skb->dst->output(skb)(ip_output)-->
+ip_fragment(break smaller piece) --> __skb_push output(skb2)(output sending queue)  
+or 
+ip_finish_output->
+
 (
 static struct inet_protosw inetsw_array[] =
 {
