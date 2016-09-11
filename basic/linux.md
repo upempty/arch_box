@@ -6,7 +6,6 @@
 如果不进行序列化，发送后就会有指向的数据丢失，无法被接收。  
 序列化(这里用protobuf方法)可以解决这样的问题:  
 ```
-protobuf as below, could solve the above issue.
 struct PlayerProfile_Struct
 {
 /*00000*/ uint32 checksum;
