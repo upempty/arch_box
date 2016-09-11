@@ -1,6 +1,9 @@
 1. 自旋锁  
 自旋锁必须是忙等模式。假如它是睡眠模式，那么就会允许中断触发，就会被别的进程中断抢占操作。  
-2. socket flow:   
+
+2.硬中断和软中断(上半部和下半部)  
+
+3. socket flow:   
 ```
 a) registered after system startup:   
 module_init for inet_init  
