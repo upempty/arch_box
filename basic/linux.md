@@ -1,9 +1,57 @@
 1. 自旋锁  
 自旋锁必须是忙等模式。假如它是睡眠模式，那么就会允许中断触发，就会被别的进程中断抢占操作。  
 
-2. 硬中断和软中断(上半部和下半部)  
+2. 序列化  
+进程间消息发送，如果是约定某个结构的消息，带有指针变量，这样这样一般的拷贝只会传递指针地址到对端。  
+如果不进行序列化，发送后就会有指向的数据丢失，无法被接收。  
+序列化(这里用protobuf方法)可以解决这样的问题:  
+```
+protobuf as below, could solve the above issue.
+struct PlayerProfile_Struct
+{
+/*00000*/ uint32 checksum;
+/*00004*/ uint32 gender;
+/*00008*/ char *name;
+};
 
-3. socket flow:   
+
+// -------------------------------------------------
+// PlayerProfile_Struct.proto
+message PlayerProfile_Struct{
+  required uint32 checksum = 1;
+  required uint32 gender = 2;
+  optional string name = 3;
+}
+ 
+// -------------------------------------------------
+// Create an instance and serialize it to a file.
+PlayerProfile_Struct player;
+player.set_checksum(50193);
+player.set_name("Alex&Anni");
+player.set_gender(2);
+ 
+fstream out("alex_anni.pb", ios::out | ios::binary | ios::trunc);
+player.SerializeToOstream(&out);
+out.close();
+ 
+// -------------------------------------------------
+// Create an instance and deserialize it from a file.
+PlayerProfile_Struct player;
+fstream in("alex_anni.pb", ios::in | ios::binary);
+if (!player.ParseFromIstream(&in)) {
+    cerr << "Failed to parse alex_anni.pb." << endl;
+    exit(1);
+}
+ 
+if (player.has_name()) {
+    cout << "e-mail: " << player.name() << endl;
+}
+
+```
+
+3. 硬中断和软中断(上半部和下半部)  
+
+4. socket flow:   
 ```
 a) registered after system startup:   
 module_init for inet_init  
