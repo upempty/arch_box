@@ -10,8 +10,10 @@ zo
   ctrl + t  
   
 **cscope -Rbq**    
-export $CSCOPE_DB=/..../cscope.out  
-:cs add $CSCOPE_DB  
+export CSCOPE_DB=/..../cscope.out  
+:cs add $CSCOPE_DB   
+  
+//in parent directory of cscope.out  
 :cs find c fun1   
 :cs find s fun1   
 
