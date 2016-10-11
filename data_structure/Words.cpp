@@ -44,6 +44,7 @@ public:
         std::cout<<words<<std::endl;
     }  
 
+private:    
     void reverseWord(char *str, int i, int j)
     {
         while(i < j)
@@ -56,7 +57,6 @@ public:
         }
     }
 
-private:    
     std::string words;
 };
 
