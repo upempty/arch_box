@@ -16,6 +16,12 @@ export CSCOPE_DB=/..../cscope.out
 //in parent directory of cscope.out  
 :cs find c fun1   
 :cs find s fun1   
+vim -t xxx(tag)  
+:ts <tag>  
+:tn  
+:tp  
+:ts  
+
 
 *cscope setting in ~/.vimrc*   
 ```
