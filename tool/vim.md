@@ -14,8 +14,10 @@ export CSCOPE_DB=/..../cscope.out
 :cs add $CSCOPE_DB   
   
 //in parent directory of cscope.out  
-:cs find c fun1   
+//:cs find c fun1   
 :cs find s fun1   
+:cs find f file  
+:cs find t sring(slow...)  
 vim -t xxx(tag)  
 :ts <tag>  
 :tn  
