@@ -3,6 +3,7 @@ make -f test.mak
 ```
 var=1  
 $(info echo abc-$(var))  
-test:  @echo "a"
+test:  
+  @echo "a"
 ```
 
