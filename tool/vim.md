@@ -1,3 +1,12 @@
+### vimgrep  
+```  
+:vimgrep /pattern/ **
+:cn---next
+:cp---pre
+:copen(:cw)
+:cclose
+
+```  
 ### hidden/extend code seg:  
 zf  
 zo  
