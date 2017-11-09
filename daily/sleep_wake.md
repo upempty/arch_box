@@ -1,4 +1,18 @@
-## linux0.11  
+## linux 0.11  
+###  how  
+```  
+sleep_on(&wait);
+wait --> pointing to current sleeping process;
+tmp  --> pointing to previous sleeped process;
+
+wake_up(&wait); 
+if sleep order A->B->C, then C->B->A:
+woke process order: 
+(wait's pointing)C-->
+(tmp point to previous)B-->
+(tmp point to previous)A-->
+(tmp point to previous)NULL
+```  
 ### sleep_on  
 ```c  
     void sleep_on(struct task_struct **p)  
