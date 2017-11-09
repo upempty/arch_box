@@ -1,7 +1,7 @@
 ## linux 0.11  
 ###  sleep_on wake_up  
 ```  
-**sleep_on(&wait);**
+sleep_on(&wait);
 wait --> pointing to current sleeping process;
 tmp  --> pointing to previous sleeped process;
 
