@@ -1,0 +1,29 @@
+## linux0.11  
+### sleep_on  
+```c  
+    void sleep_on(struct task_struct **p)  
+    {  
+        struct task_struct *tmp;  
+      
+        if (!p)  
+            return;  
+        if (current == &(init_task.task))  
+            panic("task[0] trying to sleep");  
+        tmp = *p;  
+        *p = current;  
+        current->state = TASK_UNINTERRUPTIBLE;  
+        schedule();  
+        if (tmp)  
+            tmp->state=0;  
+    } 
+```  
+### wake_up  
+```c  
+    void wake_up(struct task_struct **p)  
+    {  
+        if (p && *p) {  
+            (**p).state=0;  
+            *p=NULL;  
+        }  
+    }
+```  
