@@ -1,7 +1,7 @@
 ## linux 0.11  
-###  how  
+###  sleep_on wake_up  
 ```  
-sleep_on(&wait);
+**sleep_on(&wait);**
 wait --> pointing to current sleeping process;
 tmp  --> pointing to previous sleeped process;
 
@@ -13,7 +13,7 @@ woke process order:
 (tmp point to previous)A-->
 (tmp point to previous)NULL
 ```  
-### sleep_on  
+#### sleep_on  
 ```c  
     void sleep_on(struct task_struct **p)  
     {  
@@ -31,7 +31,7 @@ woke process order:
             tmp->state=0;  
     } 
 ```  
-### wake_up  
+#### wake_up  
 ```c  
     void wake_up(struct task_struct **p)  
     {  
