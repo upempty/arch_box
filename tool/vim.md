@@ -5,7 +5,7 @@
 :cp---pre
 :copen(:cw)
 :cclose
-
+:res +5    ---to resize window
 ```  
 ### hidden/extend code seg:  
 zf  
