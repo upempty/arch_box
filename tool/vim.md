@@ -10,6 +10,8 @@ CTRL + o   ---return old position
 CTRL + i   ---forward the position
 :Ex folder ---list folder
 :only      ---current window as only window to show full screen, hidden others windows
+CTRL + w, release , then _      --max curr window size
+CTRL + w, release , then =      --equal size up and down window
 ```  
 ### hidden/extend code seg:  
 zf  
