@@ -6,6 +6,9 @@
 :copen(:cw)
 :cclose
 :res +5    ---to resize window
+CTRL + o   ---return old position
+CTRL + i   ---forward the position
+
 ```  
 ### hidden/extend code seg:  
 zf  
