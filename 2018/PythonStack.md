@@ -8,6 +8,9 @@ __init__
 @decorator_functionx(e.g: @my_logger; @my_timer)
 
 ## coroutine
+n = yield x
+gen.send(n)
+gen.next()
 
 ## event driven
 
