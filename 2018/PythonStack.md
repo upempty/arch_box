@@ -13,6 +13,7 @@ def fun(cls, xx):
 __repr__  
 '{1}{0}'.format(arg0, arg1)  
 '{first} {secKey2}'.format(**data)  
+__add__(1,2)
 ```  
 
 
