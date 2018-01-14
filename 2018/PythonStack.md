@@ -36,9 +36,10 @@ gen.next()
 ---app.readme
 ```  
 
-## jinjia2  in html  
+## jinjia2  in html
+```
 {% condition %}
 {{ variable }}
-
+```
 
 
