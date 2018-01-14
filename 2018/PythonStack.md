@@ -6,6 +6,7 @@ __init__
 @fullname.deleter  
 @decorator_class
 @decorator_functionx(e.g: @my_logger; @my_timer)
+@classmethod
 
 ## coroutine
 n = yield x
@@ -24,6 +25,10 @@ gen.next()
 ---app.py
 ---app.readme
 ```  
+
+## jinjia2  in html  
+{% condition %}
+{{ variable }}
 
 
 
