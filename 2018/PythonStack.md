@@ -40,6 +40,14 @@ gen.next()
 ```
 {% condition %}
 {{ variable }}
+{% extends "layout.html" %}
 ```
+
+## flask
+```
+app.route("/")
+render_template('index.html', **locals)
+```
+
 
 
