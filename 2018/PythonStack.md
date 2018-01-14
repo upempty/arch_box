@@ -17,9 +17,11 @@ __repr__
 
 
 ## coroutine
+```
 n = yield x
 gen.send(n)
 gen.next()
+```
 
 ## event driven
 
