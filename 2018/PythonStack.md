@@ -14,4 +14,13 @@ gen.next()
 
 ## event driven
 
+## structure
+---project
+----|---__init__.py
+----|---__static
+----|---templates
+----|---views.py
+---app.py
+---app.readme
+
 
