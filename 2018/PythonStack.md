@@ -18,9 +18,9 @@ __init__.py used for import this directory module
 event loop
 await asyncio.sleep(0)
 Socket.IO over WebSocket&http long-polling
+return---stop interation
 
 ```  
-
 
 ## coroutine
 ```
@@ -29,6 +29,14 @@ gen.send(n)
 gen.next()
 ```
 
+## asyncio
+```
+def async_foo->async def foo
+import asyncio
+async_sleep(x)->asyncio.sleep(x)
+remove sleep(x)
+yield from foo->await foo
+```
 ## event driven
 
 ## structure  
