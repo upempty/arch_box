@@ -1,4 +1,4 @@
 
 ## Messaging Passing
-* socket io chat python app
-* zeromq chat python app
+1. socket io chat python app
+2. zeromq chat python app
