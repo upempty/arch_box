@@ -1,5 +1,5 @@
 ## guide myself  
-[view](say/say_o_png.png)
+![view](say/say_o_png.png)
 ## message
 ```
 zmq daily code analysis;
