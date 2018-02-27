@@ -1,4 +1,5 @@
 ## guide myself  
+[view](say/say_o_png.png)
 ## message
 ```
 zmq daily code analysis;
@@ -11,3 +12,4 @@ chat app---2018-1-22->2018-3-22
 tool
 web app
 ```
+
