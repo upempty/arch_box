@@ -8,8 +8,8 @@ see doc [here](_linux_networking.md)
 ## 5. TCP
 ## 6. UDP
 ## 7. SCTP
-## 8. OS  
-[lxxxxxxxxxxxxxxxxxxxxxxxxx] (_os.md)
+## 8. OS
+see doc [here](_os.md)  
 
-linux kernel [here] (_os.md)
+
 
