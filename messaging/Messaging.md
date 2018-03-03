@@ -9,10 +9,6 @@ see doc [here](_ipc.md)
 ## 5. TCP
 ## 6. UDP
 ## 7. SCTP
-## 8. OS
-see doc [here](_os.md)  
-## 9. UT
-see doc [here](_ut.md)  
 
 
 
