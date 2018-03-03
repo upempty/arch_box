@@ -26,5 +26,22 @@ struct sk_buff *skb = alloc_skb(size, priority);
 有空间，则给接收，否则不给接收  
 
 ## socket several tx rx queues  
-queue is stored pointer or descriptor. e.g storing sk_buff ptr, which will pointer real packet data  
+queue is stored pointer or descriptor. e.g storing sk_buff ptr, which will pointer real packet data   
 
+# packet transmit
+layer 5 Session layer(sockets/files)
+write / sendto / sendmsg
+
+layer 4 Transport layer(TCP)
+tcp_sendmsg
+TCP performs timeout and retransmission
+routers
+
+layer 3 Network layer
+ip_queue_xmit/ip_output
+bridge
+
+layer 2 Link layer
+dev_queue_xmit/netif_schedule
+
+layer 1 Hardware layer
