@@ -5,6 +5,7 @@
 ## 3. linux kernel networking  
 see doc [here](_linux_networking.md)  
 ## 4. IPC
+see doc [here](_ipc.md)  
 ## 5. TCP
 ## 6. UDP
 ## 7. SCTP

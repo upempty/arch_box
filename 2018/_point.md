@@ -1,3 +1,23 @@
+1. print debug info in makefile(test.mak)  
+make -f test.mak 
+```
+var=1  
+$(info echo abc-$(var))  
+test:  
+  @echo "a"
+```
+
+2. refresh  
+sleep()  
+clear()  
+printf for map  
+  
+...  
+sleep()  
+clear()  
+printf for map  
+...  
+
 ### vimgrep  
 ```  
 :vimgrep /pattern/ **
@@ -58,3 +78,24 @@ if has("cscope")
 endif
 ```
 
+## tmux  
+tmux 
+ctrl + b + %
+ctrl + b + ->(arrow)
+
+
+
+### Vagrant/VM:
+centos image: ???
+
+### Vagrant image recovery  
+1. find used vbox uuid via C:\Users\f1cheng\VirtualBox VMs\vag_default_1437448740438_26687's vag_default_1437448740438_26687.vbox's uuid. 
+```  
+box-disk1.vmdk stored the data in C:\Users\f1cheng\VirtualBox VMs\vag_default_1437448740438_26687\
+```  
+  
+2. update this uuid in below files which files is in vagrant up folder:D:\virtualBox\vag\  
+```  
+D:\virtualBox\vag\.vagrant\machines\default\virtualbox\action_provision
+D:\virtualBox\vag\.vagrant\machines\default\virtualbox\id
+```  
