@@ -850,9 +850,12 @@ private:
                 g_logger.log(LOG_DEBUG, "Processing frame with filter");
                 process_with_filter(frame, filtered_frame);
             } else {
-                AVFrame* new_frame = av_frame_alloc();
-                av_frame_ref(new_frame, frame);
-                frame_queue_.push(new_frame);
+				AVFrame* new_frame = av_frame_clone(frame); 
+                if (!new_frame) {
+                    g_logger.log(LOG_ERROR, "Failed to clone filtered frame");
+                    continue;
+                }
+				frame_queue_.push(new_frame);
             }
 
             // Requeue the buffer
