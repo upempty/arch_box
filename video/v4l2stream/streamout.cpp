@@ -830,7 +830,12 @@ private:
             frame->width = v4l2_width_;
             frame->height = v4l2_height_;
             frame->format = v4l2_pix_fmt_;
-            frame->pts = frame_count_++;
+            // frame->pts = frame_count_++;
+            AVRational input_time_base = {1, static_cast<int>(config_.input_fps)};
+            frame->pts = av_rescale_q(frame_count_++, 
+                                    input_time_base, 
+                                    input_time_base);
+
 
             // For MPlane, we need to set data and linesize for each plane
             for (int i = 0; i < 1; i++) {
@@ -850,11 +855,18 @@ private:
                 g_logger.log(LOG_DEBUG, "Processing frame with filter");
                 process_with_filter(frame, filtered_frame);
             } else {
-				AVFrame* new_frame = av_frame_clone(frame); 
+
+	        AVFrame* new_frame = av_frame_clone(frame); 
                 if (!new_frame) {
                     g_logger.log(LOG_ERROR, "Failed to clone filtered frame");
                     continue;
                 }
+				
+                AVRational encoder_time_base = encoder_ctx_->time_base;
+                new_frame->pts = av_rescale_q(new_frame->pts, 
+                                            input_time_base, 
+                                            encoder_time_base);
+			    
 				frame_queue_.push(new_frame);
             }
 
